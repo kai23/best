@@ -39,7 +39,7 @@ public class Adresses implements Serializable {
 	
 	@OneToMany
 	@JoinColumn(name="idAdress", referencedColumnName="id")
-	private Collection<Users> user;	
+	private Collection<Agencies> agency;	
 	
 	/**
 	 * @return the id
