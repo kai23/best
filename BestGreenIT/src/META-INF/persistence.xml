@@ -10,6 +10,7 @@
 		<class>com.ingesup.greenIT.Users</class>
 		<class>com.ingesup.greenIT.Rights</class>
 		<class>com.ingesup.greenIT.Adresses</class>
+		<class>com.ingesup.greenIT.Status</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://sql2.cluster1.easy-hebergement.net"/>
 			<property name="javax.persistence.jdbc.user" value="kevinberic"/>

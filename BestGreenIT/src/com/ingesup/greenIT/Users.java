@@ -1,6 +1,7 @@
 package com.ingesup.greenIT;
 
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.*;
@@ -41,6 +42,9 @@ public class Users implements Serializable {
 	@Column(name="DriveLicenceNumber")
 	private String driveLicenceNumber;
 
+	@OneToMany
+	@JoinColumn(name="idUser", referencedColumnName="id")
+	private Collection<Orders> order;	
 	/**
 	 * @return the id
 	 */
@@ -151,6 +155,20 @@ public class Users implements Serializable {
 	 */
 	public void setDriveLicenceNumber(String driveLicenceNumber) {
 		this.driveLicenceNumber = driveLicenceNumber;
+	}
+
+	/**
+	 * @return the order
+	 */
+	public Collection<Orders> getOrder() {
+		return order;
+	}
+
+	/**
+	 * @param order the order to set
+	 */
+	public void setOrder(Collection<Orders> order) {
+		this.order = order;
 	}
 
 	public Users() {

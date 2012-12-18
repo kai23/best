@@ -3,6 +3,8 @@ package com.ingesup.greenIT;
 import java.io.Serializable;
 import java.lang.Integer;
 import java.lang.Long;
+import java.util.Collection;
+
 import javax.persistence.*;
 
 /**
@@ -23,6 +25,10 @@ public class Cars implements Serializable {
 	private Agencies idAgency;
 	private static final long serialVersionUID = 1L;
 
+	@OneToMany
+	@JoinColumn(name="idCar", referencedColumnName="id")
+	private Collection<Orders> order;	
+	
 	public Cars() {
 		super();
 	}  
@@ -64,6 +70,20 @@ public class Cars implements Serializable {
 
 	public void setIdAgency(Agencies idAgency) {
 		this.idAgency = idAgency;
+	}
+
+	/**
+	 * @return the order
+	 */
+	public Collection<Orders> getOrder() {
+		return order;
+	}
+
+	/**
+	 * @param order the order to set
+	 */
+	public void setOrder(Collection<Orders> order) {
+		this.order = order;
 	}
    
 }
