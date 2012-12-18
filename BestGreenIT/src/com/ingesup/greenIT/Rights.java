@@ -21,6 +21,7 @@ public class Rights implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;   
 	
+	@Column(name="Label")
 	private String name;
 	
 	@OneToMany

@@ -15,6 +15,8 @@ import javax.persistence.*;
 
 public class Brands implements Serializable {
 
+	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -23,7 +25,7 @@ public class Brands implements Serializable {
 	@JoinColumn(name="idModel", referencedColumnName="id")
 	private Collection<Models> models;	
 	
-	@Column(name="Libellé")
+	@Column(name="Label")
 	private String name;
 	
 	public Collection<Models> getModels() {
@@ -33,8 +35,6 @@ public class Brands implements Serializable {
 	public void setModels(Collection<Models> models) {
 		this.models = models;
 	}
-
-	private static final long serialVersionUID = 1L;
 
 	public Brands() {
 		super();

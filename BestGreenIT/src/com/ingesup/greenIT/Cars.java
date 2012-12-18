@@ -15,15 +15,14 @@ import javax.persistence.*;
 
 public class Cars implements Serializable {
 
+	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	@Column(name="Miles")
 	private Integer miles;
-	private Categories idCategory;
-	private Models idModel;
-	private Agencies idAgency;
-	private static final long serialVersionUID = 1L;
 
 	@OneToMany
 	@JoinColumn(name="idCar", referencedColumnName="id")
@@ -46,44 +45,6 @@ public class Cars implements Serializable {
 
 	public void setMiles(Integer miles) {
 		this.miles = miles;
-	}
-	
-	public Categories getIdCategory() {
-		return idCategory;
-	}
-
-	public void setIdCategory(Categories idCategory) {
-		this.idCategory = idCategory;
-	}
-
-	public Models getIdModel() {
-		return idModel;
-	}
-
-	public void setIdModel(Models idModel) {
-		this.idModel = idModel;
-	}
-
-	public Agencies getIdAgency() {
-		return idAgency;
-	}
-
-	public void setIdAgency(Agencies idAgency) {
-		this.idAgency = idAgency;
-	}
-
-	/**
-	 * @return the order
-	 */
-	public Collection<Orders> getOrder() {
-		return order;
-	}
-
-	/**
-	 * @param order the order to set
-	 */
-	public void setOrder(Collection<Orders> order) {
-		this.order = order;
 	}
    
 }

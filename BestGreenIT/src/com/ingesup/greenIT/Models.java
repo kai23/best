@@ -15,6 +15,8 @@ import javax.persistence.*;
 
 public class Models implements Serializable {
 
+	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -25,9 +27,6 @@ public class Models implements Serializable {
 	@OneToMany
 	@JoinColumn(name="idModel", referencedColumnName="id")
 	private Collection<Cars> cars;	
-	
-
-	private static final long serialVersionUID = 1L;
 
 	public Models() {
 		super();

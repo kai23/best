@@ -19,12 +19,22 @@ public class Adresses implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	@Column(name="Number")
 	private int number;
 	
+	@Column(name="Street")
 	private String street;
+	
+	@Column(name="StreetNext")
 	private String streetNext;
+	
+	@Column(name="ZipCode")
 	private int zipCode;
+	
+	@Column(name="City")
 	private String city;
+	
+	@Column(name="Country")
 	private String country;
 	
 	@OneToMany
