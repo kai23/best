@@ -20,6 +20,7 @@ public class Todo implements Serializable {
 	public Long getId() {
 		return id;
 	}
+	
 	public void setId(Long id) {
 		this.id = id;
 	}
@@ -27,6 +28,7 @@ public class Todo implements Serializable {
 	public String getSummary() {
 		return summary;
 	}
+	
 	public void setSummary(String summary) {
 		this.summary = summary;
 	}
@@ -34,9 +36,11 @@ public class Todo implements Serializable {
 	public String getDescription() {
 		return description;
 	}
+	
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	
 	@Override
 	public String toString() {
 		return "Todo [id=" + id + ", summary=" + summary + ", description="
