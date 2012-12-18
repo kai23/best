@@ -14,10 +14,6 @@ public class Adresses implements Serializable {
 
 	
 	private static final long serialVersionUID = 1L;
-<<<<<<< HEAD
-=======
-
->>>>>>> branch 'master' of https://github.com/kai23/best.git
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -36,10 +32,6 @@ public class Adresses implements Serializable {
 	/**
 	 * @return the id
 	 */
-<<<<<<< HEAD
-	
-=======
->>>>>>> branch 'master' of https://github.com/kai23/best.git
 	public Long getId() {
 		return id;
 	}
