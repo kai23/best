@@ -41,6 +41,10 @@ public class Adresses implements Serializable {
 	@JoinColumn(name="idAdress", referencedColumnName="id")
 	private Collection<Agencies> agency;	
 	
+	@OneToMany
+	@JoinColumn(name="idAdress", referencedColumnName="id")
+	private Collection<Users> user;
+	
 	/**
 	 * @return the id
 	 */

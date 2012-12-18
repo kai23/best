@@ -22,7 +22,7 @@ public class Brands implements Serializable {
 	private Long id;
 	
 	@OneToMany
-	@JoinColumn(name="idModel", referencedColumnName="id")
+	@JoinColumn(name="idBrand", referencedColumnName="id")
 	private Collection<Models> models;	
 	
 	@Column(name="Label")
