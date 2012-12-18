@@ -41,5 +41,29 @@ public class Cars implements Serializable {
 	public void setMiles(Integer miles) {
 		this.miles = miles;
 	}
+	
+	public Categories getIdCategory() {
+		return idCategory;
+	}
+
+	public void setIdCategory(Categories idCategory) {
+		this.idCategory = idCategory;
+	}
+
+	public Models getIdModel() {
+		return idModel;
+	}
+
+	public void setIdModel(Models idModel) {
+		this.idModel = idModel;
+	}
+
+	public Agencies getIdAgency() {
+		return idAgency;
+	}
+
+	public void setIdAgency(Agencies idAgency) {
+		this.idAgency = idAgency;
+	}
    
 }
