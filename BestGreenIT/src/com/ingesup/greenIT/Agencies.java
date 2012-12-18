@@ -2,6 +2,8 @@ package com.ingesup.greenIT;
 
 import java.io.Serializable;
 import java.lang.String;
+import java.util.Collection;
+
 import javax.persistence.*;
 
 /**
@@ -16,8 +18,14 @@ public class Agencies implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	@Column(name="Name")
 	private String name;
-	private Adresses idAdress;
+	
+	@OneToMany
+	@JoinColumn(name="idAgency", referencedColumnName="id")
+	private Collection<Cars> cars;	
+	
+	
 	private static final long serialVersionUID = 1L;
 
 	public Agencies() {
@@ -37,13 +45,14 @@ public class Agencies implements Serializable {
 
 	public void setName(String name) {
 		this.name = name;
-	}   
-	public Adresses getIdAdress() {
-		return this.idAdress;
 	}
 
-	public void setIdAdress(Adresses idAdress) {
-		this.idAdress = idAdress;
+	public Collection<Cars> getCars() {
+		return cars;
 	}
+
+	public void setCars(Collection<Cars> cars) {
+		this.cars = cars;
+	}   
    
 }

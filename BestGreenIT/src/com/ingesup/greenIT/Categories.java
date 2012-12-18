@@ -3,6 +3,8 @@ package com.ingesup.greenIT;
 import java.io.Serializable;
 import java.lang.Long;
 import java.lang.String;
+import java.util.Collection;
+
 import javax.persistence.*;
 
 /**
@@ -19,6 +21,18 @@ public class Categories implements Serializable {
 	
 	private String name;
 	private static final long serialVersionUID = 1L;
+	
+	@OneToMany
+	@JoinColumn(name="idCategory", referencedColumnName="id")
+	private Collection<Cars> cars;	
+	
+	public Collection<Cars> getCars() {
+		return cars;
+	}
+
+	public void setCars(Collection<Cars> cars) {
+		this.cars = cars;
+	}
 
 	public Categories() {
 		super();

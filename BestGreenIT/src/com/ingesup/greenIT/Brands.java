@@ -3,6 +3,8 @@ package com.ingesup.greenIT;
 import java.io.Serializable;
 import java.lang.Long;
 import java.lang.String;
+import java.util.Collection;
+
 import javax.persistence.*;
 
 /**
@@ -17,7 +19,21 @@ public class Brands implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	@OneToMany
+	@JoinColumn(name="idModel", referencedColumnName="id")
+	private Collection<Models> models;	
+	
+	@Column(name="Libellé")
 	private String name;
+	
+	public Collection<Models> getModels() {
+		return models;
+	}
+
+	public void setModels(Collection<Models> models) {
+		this.models = models;
+	}
+
 	private static final long serialVersionUID = 1L;
 
 	public Brands() {
