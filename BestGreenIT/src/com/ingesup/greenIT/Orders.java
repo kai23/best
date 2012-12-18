@@ -2,29 +2,24 @@ package com.ingesup.greenIT;
 
 import java.io.Serializable;
 import java.lang.Long;
-import javax.persistence.*;
+import java.util.Date;
 
-import org.eclipse.persistence.jpa.jpql.parser.DateTime;
+import javax.persistence.*;
 
 /**
  * Entity implementation class for Entity: History
  *
  */
 @Entity
-
 public class Orders implements Serializable {
 
+	private static final long serialVersionUID = 1L;
 	
 	private Long id;
 	private Users idUser;
-	private DateTime startDate;
-	private DateTime endDate;
+	private Date startDate;
+	private Date endDate;
 	private Cars idCar;
-	private static final long serialVersionUID = 1L;
-
-	public Orders() {
-		super();
-	}   
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -42,18 +37,22 @@ public class Orders implements Serializable {
 	public void setIdUser(Users idUser) {
 		this.idUser = idUser;
 	}   
-	public DateTime getStartDate() {
+	
+	@Temporal(TemporalType.DATE)
+	public Date getStartDate() {
 		return this.startDate;
 	}
 
-	public void setStartDate(DateTime startDate) {
+	public void setStartDate(Date startDate) {
 		this.startDate = startDate;
-	}   
-	public DateTime getEndDate() {
+	}  
+	
+	@Temporal(TemporalType.DATE)
+	public Date getEndDate() {
 		return this.endDate;
 	}
 
-	public void setEndDate(DateTime endDate) {
+	public void setEndDate(Date endDate) {
 		this.endDate = endDate;
 	}   
 	public Cars getIdCar() {
@@ -63,5 +62,9 @@ public class Orders implements Serializable {
 	public void setIdCar(Cars idCar) {
 		this.idCar = idCar;
 	}
+	
+	public Orders() {
+		super();
+	}   
    
 }

@@ -1,6 +1,8 @@
 package com.ingesup.greenIT;
 
 import java.io.Serializable;
+import java.util.Collection;
+
 import javax.persistence.*;
 
 /**
@@ -13,7 +15,10 @@ public class Adresses implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
 	private int number;
 	private String street;
 	private String streetNext;
@@ -21,11 +26,13 @@ public class Adresses implements Serializable {
 	private String city;
 	private String country;
 	
+	@OneToMany
+	@JoinColumn(name="idAdress", referencedColumnName="id")
+	private Collection<Users> user;	
+	
 	/**
 	 * @return the id
 	 */
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Long getId() {
 		return id;
 	}

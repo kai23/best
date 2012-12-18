@@ -13,8 +13,10 @@ import javax.persistence.*;
 
 public class Categories implements Serializable {
 
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
 	private String name;
 	private static final long serialVersionUID = 1L;
 
@@ -22,8 +24,6 @@ public class Categories implements Serializable {
 		super();
 	}   
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Long getId() {
 		return this.id;
 	}
