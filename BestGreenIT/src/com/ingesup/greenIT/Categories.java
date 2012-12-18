@@ -18,7 +18,7 @@ public class Categories implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+	@Column(name="Name")
 	private String name;
 	private static final long serialVersionUID = 1L;
 	
