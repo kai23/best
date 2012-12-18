@@ -56,6 +56,7 @@ public class Adresses implements Serializable {
 	 */
 	public String getStreet() {
 		return street;
+		
 	}
 
 	/**
