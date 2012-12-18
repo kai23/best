@@ -15,12 +15,14 @@ import javax.persistence.*;
 
 public class Categories implements Serializable {
 
+	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Column(name="Name")
+	@Column(name="Label")
 	private String name;
-	private static final long serialVersionUID = 1L;
+	
 	
 	@OneToMany
 	@JoinColumn(name="idCategory", referencedColumnName="id")
