@@ -13,7 +13,8 @@ import javax.persistence.*;
 
 public class Cars implements Serializable {
 
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private Integer miles;
 	private Categories idCategory;
@@ -25,8 +26,6 @@ public class Cars implements Serializable {
 		super();
 	}  
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Long getId() {
 		return this.id;
 	}

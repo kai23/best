@@ -12,7 +12,8 @@ public class Adresses implements Serializable {
 
 	
 	private static final long serialVersionUID = 1L;
-
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private int number;
 	private String street;
@@ -24,8 +25,7 @@ public class Adresses implements Serializable {
 	/**
 	 * @return the id
 	 */
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
 	public Long getId() {
 		return id;
 	}

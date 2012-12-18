@@ -12,7 +12,8 @@ import javax.persistence.*;
 
 public class Agencies implements Serializable {
 
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
 	private Adresses idAdress;
@@ -22,8 +23,6 @@ public class Agencies implements Serializable {
 		super();
 	}
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Long getId() {
 		return this.id;
 	}
