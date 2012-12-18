@@ -19,6 +19,7 @@ public class Adresses implements Serializable {
 	private Long id;
 	
 	private int number;
+	
 	private String street;
 	private String streetNext;
 	private int zipCode;
