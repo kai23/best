@@ -1,6 +1,8 @@
 package com.ingesup.greenIT;
 
 import java.io.Serializable;
+import java.util.Collection;
+
 import javax.persistence.*;
 
 /**
@@ -12,9 +14,14 @@ public class Adresses implements Serializable {
 
 	
 	private static final long serialVersionUID = 1L;
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/kai23/best.git
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
 	private int number;
 	private String street;
 	private String streetNext;
@@ -22,10 +29,17 @@ public class Adresses implements Serializable {
 	private String city;
 	private String country;
 	
+	@OneToMany
+	@JoinColumn(name="idAdress", referencedColumnName="id")
+	private Collection<Users> user;	
+	
 	/**
 	 * @return the id
 	 */
+<<<<<<< HEAD
 	
+=======
+>>>>>>> branch 'master' of https://github.com/kai23/best.git
 	public Long getId() {
 		return id;
 	}

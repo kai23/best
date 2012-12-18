@@ -15,23 +15,42 @@ public class Users implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
-	private Long id;
-	private String name;
-	private String surname;
-	private String email;
-	private String password;
-	private boolean state;
-	private Rights idRight;
-	private Date birthDate;
-	private Adresses idAdress;
-	private String driveLicenceNumber;
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	@Column(name="Name")
+	private String name;
+	
+	@Column(name="Surname")
+	private String surname;
+	
+	@Column(name="Email")
+	private String email;
+	
+	@Column(name="Password")
+	private String password;
+	
+	@Column(name="State")
+	private boolean state;
+	
+	@Temporal(TemporalType.DATE)
+	@Column(name="BirthDate")
+	private Date birthDate;
+	
+	@Column(name="DriveLicenceNumber")
+	private String driveLicenceNumber;
+
+	/**
+	 * @return the id
+	 */
 	public Long getId() {
 		return id;
 	}
 	
+	/**
+	 * @return id the id to set
+	 */
 	public void setId(Long id) {
 		this.id = id;
 	}
@@ -107,20 +126,6 @@ public class Users implements Serializable {
 	}
 
 	/**
-	 * @return the idRight
-	 */
-	public Rights getIdRight() {
-		return idRight;
-	}
-
-	/**
-	 * @param idRight the idRight to set
-	 */
-	public void setIdRight(Rights idRight) {
-		this.idRight = idRight;
-	}
-
-	/**
 	 * @return the birthDate
 	 */
 	public Date getBirthDate() {
@@ -132,20 +137,6 @@ public class Users implements Serializable {
 	 */
 	public void setBirthDate(Date birthDate) {
 		this.birthDate = birthDate;
-	}
-
-	/**
-	 * @return the idAdress
-	 */
-	public Adresses getIdAdress() {
-		return idAdress;
-	}
-
-	/**
-	 * @param idAdress the idAdress to set
-	 */
-	public void setIdAdress(Adresses idAdress) {
-		this.idAdress = idAdress;
 	}
 
 	/**

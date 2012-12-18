@@ -6,7 +6,7 @@
 	<classpathentry exported="true" kind="con" path="org.eclipse.datatools.connectivity.jdt.DRIVERLIBRARY/MySQL JDBC Driver"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/Eclipselink">
 		<attributes>
-			<attribute name="owner.project.facets" value="jpt.jpa;#system#"/>
+			<attribute name="owner.project.facets" value="#system#;jpt.jpa"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">

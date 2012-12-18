@@ -3,6 +3,9 @@ package com.ingesup.greenIT;
 import java.io.Serializable;
 import java.lang.Long;
 import java.lang.String;
+import java.util.Collection;
+import java.util.Set;
+
 import javax.persistence.*;
 
 /**
@@ -12,16 +15,22 @@ import javax.persistence.*;
 @Entity
 public class Rights implements Serializable {
 
-	private Long id;   
-	private String name;
 	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;   
+	
+	private String name;
+	
+	@OneToMany
+	@JoinColumn(name="idRight", referencedColumnName="id")
+	private Collection<Users> user;	
 
 	public Rights() {
 		super();
 	}  
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Long getId() {
 		return this.id;
 	}

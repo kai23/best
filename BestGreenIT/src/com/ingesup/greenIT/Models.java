@@ -13,8 +13,10 @@ import javax.persistence.*;
 
 public class Models implements Serializable {
 
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
 	private String name;
 	private Brands idBrand;
 	private static final long serialVersionUID = 1L;
@@ -22,9 +24,7 @@ public class Models implements Serializable {
 	public Models() {
 		super();
 	}   
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
 	public Long getId() {
 		return this.id;
 	}
