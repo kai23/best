@@ -9,16 +9,12 @@
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width">
 
-<link rel="stylesheet" href="../css/bootstrapCss/bootstrap.min.css">
-<style>
-body {
-	padding-top: 60px;
-	padding-bottom: 40px;
-}
-</style>
+<link rel="stylesheet" href="../css/BootStrapCss/bootstrap.min.css">
+<link rel="stylesheet" href="../css/JQuery/jquery-ui.css" />
 <link rel="stylesheet"
-	href="../css/bootstrapCss/bootstrap-responsive.min.css">
-
+	href="../css/BootStrapCss/bootstrap-responsive.min.css">
+<link rel="stylesheet"
+	href="../css/main.css">
 
 </head>
 <body>
@@ -28,7 +24,7 @@ body {
 
 	<!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
 	<div class="container">
-
+		
 		<div class="navbar navbar-inverse">
 			<div class="navbar-inner">
 				<div class="container">
@@ -42,7 +38,14 @@ body {
 									<li id="Renault"><a>Renault</a></li>
 									<li id="Peugeot"><a>Peugeot</a></li>
 									<li id="Citroën"><a>Citroën</a></li>
-								</ul></li>
+								</ul>
+							</li>
+							<li class="dropdown" >
+							<span class="datepickerText">Begin Date:</span><input type="text" id="datepickerBegin" class="datepicker" size="10" class="hasDatepicker"/>
+							</li>
+							<li class="dropdown" >
+							<span class="datepickerText">End Date:</span><input type="text" id="datepickerEnd" class="datepicker"  size="10" class="hasDatepicker"/>
+							</li>
 						</ul>
 						<!--<button id="Search" type="submit" class="btn pull-right">Search</button>-->
 						<!--</form>-->
@@ -56,8 +59,10 @@ body {
 	<!-- /container -->
 </body>
 <script>window.jQuery || document.write('<script src="../js/JQuery/jquery-1.8.3.min.js"><\/script>')</script>
-<script src="../js/bootstrapJs/bootstrap.min.js"></script>
-<script src="../js/parameterBar/parameterBar.js"></script>
-<script src="../js/parameterBar/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<script src="../js/BootStrapJs/bootstrap.min.js"></script>
+<script src="../js/DatePicker/datePicker.js"></script>
+<script src="../js/ParameterBar/parameterBar.js"></script>
+<script src="../js/ParameterBar/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<script src="../js/JQuery/jquery-ui.js"></script>
 
 </html>
