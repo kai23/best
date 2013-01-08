@@ -10,5 +10,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Eclipselink"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.lib.hibernate41.MYECLIPSE_HIBERNATE_4_1_CORE"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.lib.hibernate41.MYECLIPSE_HIBERNATE_4_1_EXTRAS"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.lib.spring31.MYECLIPSE_SPRING31_CORE"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
