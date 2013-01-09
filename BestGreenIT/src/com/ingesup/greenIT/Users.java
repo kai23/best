@@ -1,7 +1,6 @@
 package com.ingesup.greenIT;
 
 import java.io.Serializable;
-import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.*;

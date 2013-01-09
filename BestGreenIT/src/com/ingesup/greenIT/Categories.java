@@ -27,14 +27,6 @@ public class Categories implements Serializable {
 	@OneToMany
 	@JoinColumn(name="idCategory", referencedColumnName="id")
 	private Collection<Cars> cars;	
-	
-	public Collection<Cars> getCars() {
-		return cars;
-	}
-
-	public void setCars(Collection<Cars> cars) {
-		this.cars = cars;
-	}
 
 	public Categories() {
 		super();
@@ -55,4 +47,11 @@ public class Categories implements Serializable {
 		this.name = name;
 	}
    
+	public Collection<Cars> getCars() {
+		return cars;
+	}
+
+	public void setCars(Collection<Cars> cars) {
+		this.cars = cars;
+	}
 }

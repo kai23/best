@@ -44,7 +44,7 @@ public class Adresses implements Serializable {
 	@OneToMany
 	@JoinColumn(name="idAdress", referencedColumnName="id")
 	private Collection<Users> user;
-	
+
 	/**
 	 * @return the id
 	 */
@@ -142,6 +142,22 @@ public class Adresses implements Serializable {
 	 */
 	public void setCountry(String country) {
 		this.country = country;
+	}
+	
+	public Collection<Agencies> getAgency() {
+		return agency;
+	}
+
+	public void setAgency(Collection<Agencies> agency) {
+		this.agency = agency;
+	}
+
+	public Collection<Users> getUser() {
+		return user;
+	}
+
+	public void setUser(Collection<Users> user) {
+		this.user = user;
 	}
 
 	public Adresses() {

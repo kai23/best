@@ -28,6 +28,14 @@ public class Models implements Serializable {
 	@JoinColumn(name="idModel", referencedColumnName="id")
 	private Collection<Cars> cars;	
 
+	public Collection<Cars> getCars() {
+		return cars;
+	}
+
+	public void setCars(Collection<Cars> cars) {
+		this.cars = cars;
+	}
+
 	public Models() {
 		super();
 	}   

@@ -46,5 +46,13 @@ public class Cars implements Serializable {
 	public void setMiles(Integer miles) {
 		this.miles = miles;
 	}
+
+	public Collection<Orders> getOrder() {
+		return order;
+	}
+
+	public void setOrder(Collection<Orders> order) {
+		this.order = order;
+	}
    
 }
