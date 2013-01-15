@@ -27,14 +27,7 @@ public class Brands implements Serializable {
 	
 	@Column(name="Label")
 	private String name;
-	
-	public Collection<Models> getModels() {
-		return models;
-	}
 
-	public void setModels(Collection<Models> models) {
-		this.models = models;
-	}
 
 	public Brands() {
 		super();
@@ -55,4 +48,11 @@ public class Brands implements Serializable {
 		this.name = name;
 	}
    
+	public Collection<Models> getModels() {
+		return models;
+	}
+
+	public void setModels(Collection<Models> models) {
+		this.models = models;
+	}
 }

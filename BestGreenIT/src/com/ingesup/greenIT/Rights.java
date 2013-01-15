@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
-import java.util.Set;
 
 import javax.persistence.*;
 
@@ -27,6 +26,14 @@ public class Rights implements Serializable {
 	@OneToMany
 	@JoinColumn(name="idRight", referencedColumnName="id")
 	private Collection<Users> user;	
+
+	public Collection<Users> getUser() {
+		return user;
+	}
+
+	public void setUser(Collection<Users> user) {
+		this.user = user;
+	}
 
 	public Rights() {
 		super();
